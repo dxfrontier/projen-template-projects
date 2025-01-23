@@ -371,7 +371,7 @@ export class SampleCodeConfigCapService extends SampleCodeConfigBase {
   }
 
   protected override get additionalDependencies(): string[] {
-    return ['@dxfrontier/cds-ts-dispatcher@^3.2.7', '@sap/cds@^8.6.1', '@sap/xssec@^4.2.8'];
+    return [/*'@dxfrontier/cds-ts-dispatcher@^3.2.7', */ '@sap/cds@^8.6.1', '@sap/xssec@^4.2.8'];
   }
 
   protected override get additionalScripts(): Record<string, string> {
