@@ -13,4 +13,5 @@ export declare class CapServiceProject extends BaseProject {
      */
     constructor(options: CapServiceProjectOptions);
     protected initializeBaseConfigs(options: BaseProjectOptions): void;
+    postSynthesize(): void;
 }

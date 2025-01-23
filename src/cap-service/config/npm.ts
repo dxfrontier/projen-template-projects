@@ -1,3 +1,4 @@
+import { Task } from 'projen';
 import { BaseProject, NpmConfigBase } from '../../base';
 import { Settings } from '../../types';
 
@@ -47,6 +48,11 @@ export class NpmConfigCapService extends NpmConfigBase {
       this.project.eslintConfig?.addIgnorePatterns(this.additionalIgnorePatterns);
       this.project.prettierConfig?.addIgnorePatterns(this.additionalIgnorePrettierPatterns);
       this.project.githubConfig?.addAttributePatterns(this.additionalAttributesPatterns);
+
+      const installTask: Task | undefined = this.project.tasks.tryFind('install');
+      if (installTask) {
+        installTask.reset("echo 'install task overwritten, postponed to npm post-install step'");
+      }
     }
   }
 }

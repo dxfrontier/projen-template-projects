@@ -83,4 +83,9 @@ export class CapServiceProject extends BaseProject {
   protected override initializeBaseConfigs(options: BaseProjectOptions): void {
     super.initializeBaseConfigs(options);
   }
+
+  public override postSynthesize(): void {
+    super.postSynthesize();
+    console.log('CapServiceProject postSynthesize');
+  }
 }

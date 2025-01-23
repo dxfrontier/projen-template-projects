@@ -740,6 +740,19 @@
             }
           ],
           "protected": true
+        },
+        {
+          "docs": {
+            "remarks": "Order is *not* guaranteed.",
+            "stability": "stable",
+            "summary": "Called after all components are synthesized."
+          },
+          "locationInModule": {
+            "filename": "src/cap-service/project.ts",
+            "line": 87
+          },
+          "name": "postSynthesize",
+          "overrides": "@dxfrontier/projen-template-projects.BaseProject"
         }
       ],
       "name": "CapServiceProject",
@@ -4536,7 +4549,7 @@
       "kind": "class",
       "locationInModule": {
         "filename": "src/cap-service/config/npm.ts",
-        "line": 7
+        "line": 8
       },
       "methods": [
         {
@@ -4547,7 +4560,7 @@
           },
           "locationInModule": {
             "filename": "src/cap-service/config/npm.ts",
-            "line": 42
+            "line": 43
           },
           "name": "registerConfig",
           "overrides": "@dxfrontier/projen-template-projects.Config"
@@ -4563,7 +4576,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "src/cap-service/config/npm.ts",
-            "line": 38
+            "line": 39
           },
           "name": "additionalAttributesPatterns",
           "overrides": "@dxfrontier/projen-template-projects.Config",
@@ -4585,7 +4598,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "src/cap-service/config/npm.ts",
-            "line": 8
+            "line": 9
           },
           "name": "additionalDevDependencies",
           "overrides": "@dxfrontier/projen-template-projects.Config",
@@ -4607,7 +4620,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "src/cap-service/config/npm.ts",
-            "line": 18
+            "line": 19
           },
           "name": "additionalIgnorePatterns",
           "overrides": "@dxfrontier/projen-template-projects.Config",
@@ -4629,7 +4642,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "src/cap-service/config/npm.ts",
-            "line": 12
+            "line": 13
           },
           "name": "additionalSettings",
           "overrides": "@dxfrontier/projen-template-projects.Config",
@@ -6462,5 +6475,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "mN/XvlQ+ro0CUM03zyLOoR9SDQDP/3u5T6vYCePOme4="
+  "fingerprint": "DAe/B9in22i98EwnTTSq682KLT7QgrGUXM1j2jqK3Es="
 }
