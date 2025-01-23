@@ -11,6 +11,7 @@ import { PrettierConfigCapService } from './config/prettier';
 import { SampleCodeConfigCapService } from './config/samplecode';
 import { TypeScriptConfigCapService } from './typescript';
 import { VsCodeConfigCapService } from './config/vscode';
+import { exec } from 'child_process';
 
 export interface CapServiceProjectOptions extends BaseProjectOptions {
   readonly namespace?: string;
@@ -87,5 +88,13 @@ export class CapServiceProject extends BaseProject {
   public override postSynthesize(): void {
     super.postSynthesize();
     console.log('CapServiceProject postSynthesize');
+    exec('npx projen eject', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    });
   }
 }
