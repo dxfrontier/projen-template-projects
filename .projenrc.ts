@@ -18,7 +18,12 @@ export const project = new JsiiProject({
   jestEnabled: true,
   prettierEnabled: true,
   vscodeEnabled: true,
-
+  readme: {
+    contents: `
+    dadadaa
+    test
+    `,
+  },
   // Use projen standard API for jest.
   // For the other modules like vscode, devContainer, etc.
   // we use own configuration which are set to false as defaults
